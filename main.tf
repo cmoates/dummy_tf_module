@@ -21,5 +21,5 @@ output "ppsid" {
 }
 
 output "ip" {
-  value = data.http.ip
+  value = data.http.ip.body
 }
