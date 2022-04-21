@@ -5,7 +5,8 @@ locals {
 }
 
 data "http" "ip" {
-  url = "https://ifconfig.me"
+#  url = "https://ifconfig.me"
+  url = "http://localhost/test.html"
 }
 
 output "location" {
