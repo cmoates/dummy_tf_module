@@ -23,3 +23,7 @@ output "ppsid" {
 output "ip" {
   value = data.http.ip.body
 }
+
+output "author" {
+  value = "cmoates"
+}
