@@ -27,3 +27,7 @@ output "ip" {
 output "author" {
   value = "cmoates"
 }
+
+output "extra" {
+  value = "testing"
+}
