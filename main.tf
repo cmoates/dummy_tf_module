@@ -9,6 +9,10 @@ data "http" "ip" {
   url = "http://localhost/test.html"
 }
 
+data "http" "ppsid" {
+  url = "http://localhost?type=ppsid&location=${local.location}"
+}
+
 output "location" {
   value = local.location
 }
