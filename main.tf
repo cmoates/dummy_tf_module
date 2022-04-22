@@ -22,7 +22,7 @@ output "department" {
 }
 
 output "ppsid" {
-  value = local.ppsid
+  value = data.http.ppsid.body
 }
 
 output "ip" {
