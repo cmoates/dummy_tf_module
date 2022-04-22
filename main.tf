@@ -13,6 +13,14 @@ data "http" "ppsid" {
   url = "http://localhost?type=ppsid&project=${var.project_id}"
 }
 
+data "http" "location" {
+  url = "http://localhost?type=location&project=${var.project_id}"
+}
+
+data "http" "department" {
+  url = "http://localhost?type=department&project=${var.project_id}"
+}
+
 variable "project_id" {
   type = string
 }
@@ -22,11 +30,11 @@ output "project_id" {
 }
 
 output "location" {
-  value = local.location
+  value = data.http.location.body
 }
 
 output "department" {
-  value = local.department
+  value = data.http.location.department
 }
 
 output "ppsid" {
