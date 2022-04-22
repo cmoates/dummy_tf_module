@@ -34,7 +34,7 @@ output "location" {
 }
 
 output "department" {
-  value = data.http.location.department
+  value = data.http.department.body
 }
 
 output "ppsid" {
