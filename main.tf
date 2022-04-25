@@ -1,12 +1,7 @@
-locals {
-  location = "USA"
-  department = "Costuming"
-  ppsid = "1234567"
-}
-
-#data "http" "ip" {
-#  url = "https://ifconfig.me"
-#  url = "http://localhost/test.html"
+#locals {
+#  location = "USA"
+#  department = "Costuming"
+#  ppsid = "1234567"
 #}
 
 data "http" "ppsid" {
@@ -25,7 +20,8 @@ variable "project_id" {
   type = string
 }
 
-output "project_id" {
+output "matched_project" {
+  # Placeholder, will need to be an additional HTTP call
   value = var.project_id
 }
 
